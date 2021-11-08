@@ -40,7 +40,6 @@ requirements:
 test:
   imports:
     - cothread
-    - cothread.catools
 
 about:
   home: https://github.com/dls-controls/cothread 
