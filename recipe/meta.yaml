@@ -33,6 +33,8 @@ requirements:
   run:
     - python
     - epicscorelibs
+    # Remove setuptools_dso once epicscorelibs is fixed to account for this new runtime dependency.
+    - setuptools_dso
     - {{ pin_compatible('numpy') }}
 
 test:
