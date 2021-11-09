@@ -18,7 +18,7 @@ source:
     - 0001-epicscorelibs.patch
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
   skip : true  # [win]
 
@@ -33,12 +33,13 @@ requirements:
   run:
     - python
     - epicscorelibs
+    # Remove setuptools_dso once epicscorelibs is fixed to account for this new runtime dependency.
+    - setuptools_dso
     - {{ pin_compatible('numpy') }}
 
 test:
   imports:
     - cothread
-    - cothread.catools
 
 about:
   home: https://github.com/dls-controls/cothread 
